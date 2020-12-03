@@ -1,4 +1,6 @@
 import React, {Fragment, useState} from 'react'
+import PropTypes from 'prop-types'
+
 import Error from './Error'
 
 const Pregunta = ({setRestante, setPresupuesto,setMostrarPregunta}) => {
@@ -52,5 +54,12 @@ const Pregunta = ({setRestante, setPresupuesto,setMostrarPregunta}) => {
         </Fragment>
     )
 }
+
+Pregunta.propType = {
+    setPresupuesto: PropTypes.func.isRequired,
+    setRestante: PropTypes.func.isRequired,
+    setMostrarPregunta: PropTypes.func.isRequired
+}
+
 
 export default Pregunta
